@@ -6,7 +6,7 @@ custResults = ""
 seeCustomers.onshow=function(){
   drpCustomers.clear()
   let query = "SELECT name FROM customer"
-  req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + query)
+  req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + query)
     if (req1.status = 200) {
       custTable = JSON.parse(req1.responseText)
       for (i = 0; i <= custTable.length - 1; i++){
@@ -28,7 +28,7 @@ drpCustomers.onclick=function(s){
     drpCustomers.value = s
     // get data from database when program loads
     let queryCustomers = "SELECT name, street, city, state, zipcode FROM customer WHERE name = " + '"' + s + '"'
-    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + queryCustomers)
+    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + queryCustomers)
       if (req1.status == 200) {
             custResults = JSON.parse(req1.responseText)
             for (i = 0; i < custResults.length; i++)

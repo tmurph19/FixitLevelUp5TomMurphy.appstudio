@@ -2,7 +2,7 @@ let results = []
 
 addCustomer.onshow=function(){
   let query = "SELECT name FROM customer"
-  req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + query)
+  req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + query)
   if (req1.status = 200) {
       results = JSON.parse(req1.responseText)
      if (results == 0){
@@ -28,7 +28,7 @@ btnSubmit1.onclick=function(){
   let zipcode = inptZipCode.value
   
   let queryAdd = "INSERT INTO customer (name, street, city, state, zipcode) VALUES ('"+name+"', '"+street+"', '"+city+"', '"+state+"', '"+zipcode+"')"
-  req11 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + query)
+  req11 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + query)
   
   if (req11.status == 200){
     if (req11.status == 500){
@@ -37,7 +37,7 @@ btnSubmit1.onclick=function(){
       } 
     }
     let query = "SELECT name FROM customer"
-    req11 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + query)
+    req11 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + query)
     if (req11.status == 200){
     lstCompany.clear()
     

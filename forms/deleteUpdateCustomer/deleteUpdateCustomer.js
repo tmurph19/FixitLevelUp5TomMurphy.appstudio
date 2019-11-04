@@ -6,7 +6,7 @@ custResults = ""
 deleteUpdateCustomers.onshow=function(){
   drpCustomers1.clear()
   let query = "SELECT name FROM customer"
-  req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + query)
+  req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + query)
     if (req1.status = 200) {
       results = JSON.parse(req1.responseText)
     } if (results == 0){
@@ -30,7 +30,7 @@ drpCustomers1.onclick=function(s){
     drpCustomers1.value = s
     // get data from database when program loads
     let queryCustomers = "SELECT name, street, city, state, zipcode FROM customer WHERE name = " + '"' + s + '"'
-    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + queryCustomers)
+    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + queryCustomers)
       if (req1.status == 200) {
             custResults = JSON.parse(req1.responseText)
             for (i = 0; i < custResults.length; i++)
@@ -47,7 +47,7 @@ btnSubmit.onclick=function(){
     let newName = txtNewName.value
     let oldName = txtCustomers1.value
     let query2 = "SELECT name, street, city, state, zipcode FROM customer"
-    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + query2)
+    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + query2)
   }
   if (req1.status == 200){
     if (req1.status == 500){
@@ -71,7 +71,7 @@ btnSubmit.onclick=function(){
         } else if (found == true) {
             NSB.MsgBox("There was a problem deleting the customer name.")
       } let queryDelete = "DELETE FROM customer WHERE name =" + '"' + nameDelete + '"'
-      req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=cjk48928&pass=BIA375CK&database=cjk48928&query=" + queryDelete)
+      req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=tpm628228&pass=Beta#118&database=tpm62822&query=" + queryDelete)
   }
   if (req1.status == 200){
     if (req1.status == 500){
